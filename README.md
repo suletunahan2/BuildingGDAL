@@ -1,5 +1,5 @@
 # GDAL'in ECW ve diğer formatlar desteğinde derlenmesi 
-
+<!--
 ## Neden derlenir?
 
 Bir dosyadan kaynak kodu derlemek, bu dosyaları yürütülebilir bir dosyaya (.exe), dinamik yük kitaplığına (.dll) veya statik kitaplığa (.lib) bağlamak anlamına gelir.
@@ -17,7 +17,7 @@ birden çok platform (x86, x64, ARM vb.)
 
 
 ## Make dosyaları nedir?
-
+-->
 
 ## GDAL (Geospatial Data Abstraction Library) nedir?
 GDAL (Jeo-uzamsal Veri Soyutlama Kitaplığı), raster ve vektör coğrafi verilerini işlemek için kullanılan bir araçtır. ArcGIS ve QGIS dahil olmak üzere birçok CBS yazılımında yardımcı araç olarak kullanılır. 
