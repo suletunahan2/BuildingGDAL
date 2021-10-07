@@ -51,7 +51,7 @@ PROJ_LIBRARY = (YOUR_OSGeo4W64_Proj_lib_path)<br>
 ECW format desteği eklenmek istenirse aynı PROJ'daki gibi path eklenir: <br>
 ECWDIR  = 	C:\warmerda\libecwj2-3.3<br>
 ECWLIB  = 	$(ECWDIR)\Source\NCSBuildQmake\Debug\libecwj2.lib<br>
-ECWFLAGS = 	-DECWSDK_VERSION=33 \<br>
+ECWFLAGS = 	-DECWSDK_VERSION=33 \ <br>
 		    -I$(ECWDIR)\include -I$(ECWDIR)/Source/include \<br>
 
 
