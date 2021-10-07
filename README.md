@@ -80,7 +80,9 @@ Visual Studio ile build yapılırken 2 farklı derleme türü karşımıza çık
 Bunlar Debug ve Release modlarıdır.<br>
 Debug modda  proje geliştirilirken çalışılır. Release mod ise proje bitip son kullanıcıya sunulurken derleme yapılan moddur. Release modda kodlar daha optimize edilmiş halde derlenir.
 
-Release modda, hedef platform x64 ile derlenir.
+Sonuç olarak GDAL, Release modda, hedef platform x64 ile derlenir.
+
+Alınan hatalar PROJ sürümünden kaynaklı olabilir. Kullanılan PROJ 6.2.1 hataya sebep olmuyor.
 
 Test için aşağıdaki komut çalıştırılabilir: <br>
 gdalinfo --formats <br>
