@@ -6,7 +6,7 @@ Bir dosyadan kaynak kodu derlemek, bu dosyaları yürütülebilir bir dosyaya (.
 
 Bu işlem aşağıdaki gibi olur:
 
-C++ önişlemcisi, her kaynak dosyadaki tüm #directives ve makro tanımlarını dönüştürür. Bu bir çeviri birimi oluşturur.
+C++ önişlemcisi, her kaynak dosyadaki tüm directives ve makro tanımlarını dönüştürür. Bu bir çeviri birimi oluşturur.
 C++ derleyicisi, ayarlanmış olan derleyici seçeneklerini uygulayarak her çeviri birimini nesne dosyalarında (.obj) derler. 
 Bağlayıcı, ayarlanmış bağlayıcı seçeneklerini uygulayarak nesne dosyalarını tek bir yürütülebilir dosyada birleştirir.
 
