@@ -72,6 +72,10 @@ gdal_vs2019.vcxproj.filters oluşur.
 Bir VCXPROJ dosyası, C ++ ile program geliştirmek için kullanılan bir Microsoft Visual Studio bileşeni olan Visual C ++ tarafından oluşturulan bir yazılım geliştirme projesidir.
 Çalıştırılabilir programlar geliştirmek ve oluşturmak için kullanılır.
 
+Bir kullanıcı dosyası (.vcxproj.user), hata ayıklama ve dağıtım ayarları gibi kullanıcıya özgü özellikleri depolar. vcxproj.user dosyası belirli bir kullanıcı için tüm projelere uygulanır.<br>
+Çözüm Gezgini projeye dosya eklemek için .vcxproj.filters dosyası kullanılmaktadır.
+
+
 Visual Studio ile build yapılırken 2 farklı derleme türü karşımıza çıkar.<br>
 Bunlar Debug ve Release modlarıdır.<br>
 Debug modda  proje geliştirilirken çalışılır. Release mod ise proje bitip son kullanıcıya sunulurken derleme yapılan moddur. Release modda kodlar daha optimize edilmiş halde derlenir.
