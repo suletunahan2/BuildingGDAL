@@ -1,10 +1,8 @@
-# GDAL'in ECW ve diğer formatlar desteğinde derlenmesi 
-<!--
+# GDAL'in ECW ve diğer formatlar desteğinde Windows'da derlenmesi 
+
 ## Neden derlenir?
 
 Bir dosyadan kaynak kodu derlemek, bu dosyaları yürütülebilir bir dosyaya (.exe), dinamik yük kitaplığına (.dll) veya statik kitaplığa (.lib) bağlamak anlamına gelir.
-
-dll :  dynamic-load library
 
 Bu işlem aşağıdaki gibi olur:
 
@@ -13,11 +11,12 @@ C++ derleyicisi, ayarlanmış olan derleyici seçeneklerini uygulayarak her çev
 Bağlayıcı, ayarlanmış bağlayıcı seçeneklerini uygulayarak nesne dosyalarını tek bir yürütülebilir dosyada birleştirir.
 
 
-birden çok platform (x86, x64, ARM vb.)
+## Makefile nedir?
 
+Makefile’ların kullanımı, programların kaynak dosyalarının birbirleri ile bağımlılıklarını derleme ve linkleme (build) aşamasında yönetmek yani programlar derlenirken birbirlerine olan bağımlılıklara ve kaynak dosyaların son değiştirilme tarihlerine bakarak sadece derlenmesi gereken dosyaları derlemektir.
+Makefile’lar Unix/Linux’ta make, Windows’ta ise nmake araçları ile yorumlanır ve koşturulurlar. 
 
-## Make dosyaları nedir?
--->
+nmake -f makefile.vc<br>
 
 ## GDAL (Geospatial Data Abstraction Library) nedir?
 GDAL (Jeo-uzamsal Veri Soyutlama Kitaplığı), raster ve vektör coğrafi verilerini işlemek için kullanılan bir araçtır. ArcGIS ve QGIS dahil olmak üzere birçok CBS yazılımında yardımcı araç olarak kullanılır. 
@@ -30,6 +29,9 @@ Ayrıca ECW, görüntü piramidini kendisi oluşturur. Böylece çok büyük ala
 daha kısa sürede ekran üzerinde görüntülenmesi sağlanır.
 
 ERDAS ECW/JP2 v4.x ve v5.x SDK yalnızca görüntü açma için ücretsizdir.  ECW 3.3 SDK için, 500 MB'tan küçük resimler ücretsiz olarak sıkıştırılabilirken, daha büyük resimler ERDAS'tan lisans alınmasını gerektirir. 
+
+## PROJ nedir?
+PROJ, coğrafi koordinatları bir koordinat referans sisteminden (CRS) diğerine dönüştüren genel bir koordinat dönüştürme yazılımıdır. 
 
 ## Derleme için yapılan işlemler
 
@@ -46,10 +48,6 @@ PROJ için include ve library path'i girilmelidir.<br>
 PROJ_INCLUDE = -I(YOUR_PROJ_SRC_PATH)<br>
 PROJ_LIBRARY = (YOUR_OSGeo4W64_Proj_lib_path)<br>
 
-<!--
-libecwj2-3.3 dosyasında bulunan Source/NCSBuildQmake altında libecwj2_win32_vc90.vcproj derlendi
-Oluşan lib ve dll dosyaları Source altında Debug klasörüne eklendi.
--->
 ECW format desteği eklenmek istenirse aynı PROJ'daki gibi path eklenir: <br>
 ECWDIR  = 	C:\warmerda\libecwj2-3.3<br>
 ECWLIB  = 	$(ECWDIR)\Source\NCSBuildQmake\Debug\libecwj2.lib<br>
@@ -74,6 +72,17 @@ gdal_vs2019.vcxproj.filters oluşur.
 Bir VCXPROJ dosyası, C ++ ile program geliştirmek için kullanılan bir Microsoft Visual Studio bileşeni olan Visual C ++ tarafından oluşturulan bir yazılım geliştirme projesidir.
 Çalıştırılabilir programlar geliştirmek ve oluşturmak için kullanılır.
 
+Visual Studio ile build yapılırken 2 farklı derleme türü karşımıza çıkar.<br>
+Bunlar Debug ve Release modlarıdır.<br>
+Debug modda  proje geliştirilirken çalışılır. Release mod ise proje bitip son kullanıcıya sunulurken derleme yapılan moddur. Release modda kodlar daha optimize edilmiş halde derlenir.
+
+Release modda, hedef platform x64 ile derlenir.
+
+Test için aşağıdaki komut çalıştırılabilir: <br>
+gdalinfo --formats <br>
+
+ECW format desteği testi için:<br>
+gdalinfo --formats | findstr ECW
 
 
 
