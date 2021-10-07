@@ -52,7 +52,7 @@ ECW format desteği eklenmek istenirse aynı PROJ'daki gibi path eklenir: <br>
 ECWDIR  = 	C:\warmerda\libecwj2-3.3<br>
 ECWLIB  = 	$(ECWDIR)\Source\NCSBuildQmake\Debug\libecwj2.lib<br>
 ECWFLAGS = 	-DECWSDK_VERSION=33 \ <br>
-		    -I$(ECWDIR)\include -I$(ECWDIR)/Source/include \<br>
+		    -I$(ECWDIR)\include -I$(ECWDIR)/Source/include \ <br>
 
 
 Visual Studio sistemini çağırmak için 'generate_vcxproj.bat' çalıştırılır. <br>
