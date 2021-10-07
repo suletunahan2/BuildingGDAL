@@ -35,10 +35,10 @@ ERDAS ECW/JP2 v4.x ve v5.x SDK yalnızca görüntü açma için ücretsizdir.  E
 
 
 İlk olarak kaynak dosyaları indirilir. <br>
-GDAL için: (https://gdal.org/download.html#current-releases)[https://gdal.org/download.html#current-releases]<br>
-PROJ için: (https://proj.org/install.html#windows)[https://proj.org/install.html#windows]<br>
-OSGeo için: (https://www.osgeo.org/projects/osgeo4w/)[https://www.osgeo.org/projects/osgeo4w/]<br>
-ECW için: (https://github.com/sasgis/libecwj2)[https://github.com/sasgis/libecwj2]
+GDAL için: [https://gdal.org/download.html#current-releases]<br>
+PROJ için: [https://proj.org/install.html#windows]<br>
+OSGeo için:[https://www.osgeo.org/projects/osgeo4w/]<br>
+ECW için: [https://github.com/sasgis/libecwj2]
 
 Daha sonra, GDAL'da bulunan nmake.opt dosyasında bazı değişiklikler yapılır.<br>
 PROJ için include ve library path'i girilmelidir.<br>
